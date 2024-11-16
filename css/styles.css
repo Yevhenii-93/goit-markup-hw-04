@@ -71,6 +71,20 @@ img {
   color: #4d5ae5;
 }
 
+.socials-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* #endregion */
 
 /* #region Header */
@@ -294,10 +308,15 @@ img {
   width: calc((100% - 3 * 24px) / 4);
 
   border-radius: 0 0 4px 4px;
+  background-color: #fff;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background-color: #fff;
 }
+
 .team-photo {
 }
 
@@ -326,22 +345,10 @@ img {
   gap: 24px;
 }
 .socials-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.socials-links {
-  padding: 12px;
-  width: 40px;
-  height: 40px;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-links:hover {
-  /* background-color: #31d0aa; */
+.socials-links:hover,
+.socials-links:focus {
   background-color: #404bbf;
 }
 
@@ -396,7 +403,7 @@ img {
   background-color: #4d5ae5;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;
+  transition-property: transform, box-shadow;
   transform: translateY(100%);
 }
 
@@ -441,6 +448,7 @@ img {
 }
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-wwrap {
   margin-right: 120px;
@@ -462,10 +470,6 @@ img {
 .footer-socials {
 }
 
-.footer-socials .socials-item {
-  gap: 16px;
-}
-
 .footer-socials-text {
   margin-bottom: 16px;
   font-weight: 500;
@@ -475,11 +479,11 @@ img {
 
 .socials-links-footer {
   padding: 8px;
-  display: flex;
-  align-items: center;
+  gap: 16px;
 }
 
-.socials-item:hover .socials-links-footer {
+.socials-item:hover .socials-links-footer,
+.socials-item:focus .socials-links-footer {
   background-color: #31d0aa;
 }
 /* #endregion */
