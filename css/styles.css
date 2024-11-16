@@ -51,6 +51,7 @@ img {
   width: 100%;
   height: auto;
 }
+
 /* #endregion */
 
 /* #region Common */
@@ -408,7 +409,7 @@ img {
   background-color: #4d5ae5;
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform, box-shadow;
+  transition-property: transform;
   transform: translateY(100%);
 }
 
@@ -474,10 +475,11 @@ img {
   line-height: 1.5;
   color: #fff;
 }
-
+.footer-socials > .socials-list {
+  gap: 16px;
+}
 .socials-links-footer {
   padding: 8px;
-  gap: 16px;
 }
 
 .socials-links-footer:hover,
